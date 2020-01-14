@@ -1,0 +1,34 @@
+Web 框架介绍
+　框架，即framework，特指为解决一个开放性问题而设计的具有一定约束性的支撑结构，使用 框架可以快速帮你开发特定的系统。
+![Web框架（来源网络）](https://upload-images.jianshu.io/upload_images/17476267-b11361891edd497d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+　　Web框架是别人已经设定好的一个web网站模板，你学习它的规则，然后“填空”或“修改”成你 需要的样子。
+Web应用框架有助于减轻网页开发时共通性活动的工作负荷，例如许多框架提供数据库访问接口、标准样板以及[会话管理](https://baike.baidu.com/item/%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86)等，可提升代码的可再用性。
+![web体系架构图（来源网络）](https://upload-images.jianshu.io/upload_images/17476267-21edc5182a84ac75.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+---
+##### MVC/MTV介绍
+######MVC框架
+　**MVC**：
+百度百科：全名Model View Controller，是模型(model)－视图(view)－控制器(controller) 的缩写，一种软件设计典范。
+用一种业务逻辑、数据、界面显示分离的方法组织代码，将业务逻辑 聚集到一个部件里面，在改进和个性化定制界面及用户交互的同时，不需要重新编写业务逻辑。
+【非官方理解】：一种文件的组织和管理形式，这其实就是把不同类型的文件放到不同的目录下的一种方法。前后端分离，松耦合等等。　
+- （1）**模型<sup>(model)</sup>**：定义数据库相关的内容，一般放在**models.py**文件中。（模型表示企业数据和业务规则。）
+- （2）**视图<sup>(view)</sup>**：定义HTML等静态网页文件相关，也就是那些**html、css、js**等前端的东西。（视图是用户看到并与之交互的界面。）
+- （3）**控制器<sup>(controller)</sup>**：定义业务逻辑相关，是应用程序中处理用户交互的部分。通常**控制器负责从视图读取数据，控制用户输入，并向模型发送数据映射，模式渲染等。**（控制器接受用户的输入并调用模型和视图去完成用户的需求）
+
+【补充（1）】：MVC 分层有助于管理复杂的应用程序，因为您可以在一个时间内专门关注一个方面
+【补充（2）】：MVC 模式同时提供了对 **HTML、CSS 和 JavaScript **的完全控制。
+【补充（3）】：最典型的MVC框架：JSP + [servlet](https://baike.baidu.com/item/servlet) + [javabean](https://baike.baidu.com/item/javabean)模式。
+
+---
+
+######MTV框架
+
+Django的MTV模式本质上和MVC是一样的，也是为了各组件间保持松耦合关系，只是定义上有些许不同。
+
+- M 代表模型<sup>（Model）</sup>：负责业务对象和数据库的关系映射(ORM)。
+- T 代表模板 <sup>(Template)</sup>：负责如何把页面展示给用户(html)。
+- V 代表视图<sup>（View）</sup>：负责业务逻辑，并在适当时候调用Model和Template。
+
+
+

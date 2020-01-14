@@ -1,0 +1,95 @@
+### 一、 static关键字
+ static关键字的总结：
+```
+class 类名{	  
+	访问权限  static  数据类型  属性名;
+	访问权限  static  返回值类型  方法名(参数列表){
+		      方法体；
+  	}
+  }
+```
+- static关键字 可以再没有创建对象的时候进行调用类的元素
+- static 可以修饰类的方法 以及类的变量， 以及静态代码块
+- 被static修饰的成为静态方法，静态方法是没有this的，静态方法不能访问同一个类中的非静态方法和静态变量，但是非静态方法，可以访问静态变量
+![3.png](https://upload-images.jianshu.io/upload_images/17476267-3278afd48c951890.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+- 类的构造器 也是静态的
+
+- static 静态代码块，static 代码块可以放在类中的任何地方，类加载的时候会按照static代码块的顺序来加载代码块，并且只会执行一次。
+- 枚举类和静态代码块 赋值静态代码块的变量
+- 非静态方法能够通过this访问静态变量
+![image.png](https://upload-images.jianshu.io/upload_images/17476267-ed02d542a9ca4fc2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 静态成员变量虽然独立于对象，但是不代表不可以通过对象去访问，所有的静态方法和静态变量都可以通过对象访问。
+
+![image.png](https://upload-images.jianshu.io/upload_images/17476267-dcbaa128c4dc1a01.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- static不可以修饰局部变量（java语法规定）
+
+---
+
+### 二、final 关键字
+【概述】：
+final关键字，在平时的过程中也是很常见的，在这里进行一下深入的学习，加深对final关键字的理解。
+
+【 使用注意点】：
+
+- 1.在java中final可以用来修饰类、方法、和变量（包括成员变量和局部变量）
+
+- 2.final修饰类的时候，这个类将永远不会被继承，类中的成员方法也会被隐式的修饰为final(尽量不要用final修饰类)
+
+- 3.如果不想方法被继承，可以用final修饰，private也会隐式的将方法指定为final
+
+
+- 4.final修饰变量的时候，如果是基本类型的变量，那么他的值在初始化之后就不能更改
+
+- 5.final在修饰对象的时候，在其初始化之后就不能指向其他对象
+
+
+- 6.被static和final修饰的变量，将会占据一段不能改变的存储空间，将会被看做编译期常量
+
+- 7.不可变的是变量的引用而非引用指向对象的内容。
+
+【注意事项】：final变量是基本类型以及String时，在编译期的时候就把它当做常量来使用，不需要在运行时候使用。
+
+######  final用于修饰对象
+```
+1 public class TestFinal {
+2     public static void main(String args[]){
+3         final TestFinal obj1 = new TestFinal();
+4         final TestFinal obj2 = new TestFinal();
+5         
+6         obj1 = obj2;
+7     }
+8 }
+```
+在编译的时候，会报错，` 不能指向一个final对象。`(原因)
+
+---
+### 二、this 关键字
+
+this关键字出现在类的成员方法中。
+this关键字的含义：当前对象的引用。
+this关键字的作用：在类的成员方法中访问当前对象的其它成员。
+有些情况下this关键字可以省略，而有些情况下则不能。
+
+
+
+---
+
+### assert关键字（了解）
+
+在目前的java编码中，是不推荐使用的，这里只是稍微了解一下。
+
+使用方式：
+
+ 
+###### 1 、*assert <boolean表达式>*
+如果`<boolean表达式>`为true，则程序继续执行。
+如果为false，则程序抛出AssertionError，并终止执行。
+ 
+###### 2、*assert <boolean表达式>*: <错误信息表达式>
+- 如果`<boolean表达式>`为true，则程序继续执行。
+- 如果为false，则程序抛出`java.lang.AssertionError`，并输入`<错误信息表达式>`。
+
