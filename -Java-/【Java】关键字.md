@@ -10,8 +10,8 @@ class 类名{
 ```
 - static关键字 可以再没有创建对象的时候进行调用类的元素
 - static 可以修饰类的方法 以及类的变量， 以及静态代码块
-- 被static修饰的成为静态方法，静态方法是没有this的，静态方法不能访问同一个类中的非静态方法和静态变量，但是非静态方法，可以访问静态变量
-![3.png](https://upload-images.jianshu.io/upload_images/17476267-3278afd48c951890.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+- 被static修饰的成为静态方法，静态方法是没有this的，静态方法不能访问同一个类中的非静态方法和静态变量，但是非静态方法，可以访问静态变量。
+
 
 
 - 类的构造器 也是静态的
@@ -19,11 +19,11 @@ class 类名{
 - static 静态代码块，static 代码块可以放在类中的任何地方，类加载的时候会按照static代码块的顺序来加载代码块，并且只会执行一次。
 - 枚举类和静态代码块 赋值静态代码块的变量
 - 非静态方法能够通过this访问静态变量
-![image.png](https://upload-images.jianshu.io/upload_images/17476267-ed02d542a9ca4fc2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 - 静态成员变量虽然独立于对象，但是不代表不可以通过对象去访问，所有的静态方法和静态变量都可以通过对象访问。
 
-![image.png](https://upload-images.jianshu.io/upload_images/17476267-dcbaa128c4dc1a01.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 - static不可以修饰局部变量（java语法规定）
 
