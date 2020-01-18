@@ -1,13 +1,13 @@
 Web 框架介绍
 　框架，即framework，特指为解决一个开放性问题而设计的具有一定约束性的支撑结构，使用 框架可以快速帮你开发特定的系统。
-![Web框架（来源网络）](https://upload-images.jianshu.io/upload_images/17476267-b11361891edd497d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
+ 
 　　Web框架是别人已经设定好的一个web网站模板，你学习它的规则，然后“填空”或“修改”成你 需要的样子。
-Web应用框架有助于减轻网页开发时共通性活动的工作负荷，例如许多框架提供数据库访问接口、标准样板以及[会话管理](https://baike.baidu.com/item/%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86)等，可提升代码的可再用性。
-![web体系架构图（来源网络）](https://upload-images.jianshu.io/upload_images/17476267-21edc5182a84ac75.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+Web应用框架有助于减轻网页开发时共通性活动的工作负荷，例如许多框架提供数据库访问接口、标准样板以及会话管理等，可提升代码的可再用性。
+
+MVC/MTV介绍
 ---
-##### MVC/MTV介绍
-######MVC框架
+### MVC框架
+---
 　**MVC**：
 百度百科：全名Model View Controller，是模型(model)－视图(view)－控制器(controller) 的缩写，一种软件设计典范。
 用一种业务逻辑、数据、界面显示分离的方法组织代码，将业务逻辑 聚集到一个部件里面，在改进和个性化定制界面及用户交互的同时，不需要重新编写业务逻辑。
