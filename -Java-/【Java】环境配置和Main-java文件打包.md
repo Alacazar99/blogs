@@ -6,7 +6,7 @@
 
 - （3） 环境配置，（右击"我的电脑"——"属性"——"高级"——"环境变量"）。
 
-- （4） 配置三个环境变量：JAVA_HOME , CLASSPATH , PATH ，具体流程见下图。
+- （4） 配置三个环境变量：`JAVA_HOME , CLASSPATH , PATH` ，具体流程见下图。
 
 
 ![Image](https://upload-images.jianshu.io/upload_images/17476267-52615711c6816c1a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
