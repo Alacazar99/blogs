@@ -3,13 +3,15 @@
 
 - 编译型：一次性转换，如C++，运行时效率高，不能跨平台
 - 解释型：逐句转换，如Python，可跨平台。
-####二、Java运行过程
+
+#### 二、Java运行过程
 - 源文件(.java)编译成字节码文件（.class）。
 - 虚拟机通过解释方式运行字节码文件。
 
 ![运行过程](https://upload-images.jianshu.io/upload_images/17476267-fe84422ad58f9e15.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 - 【拓展】：[【java运行环境的配置以及java文件打包】](https://www.jianshu.com/p/72d6a3a2b62c)
-####三、 【Java】基础要点
+
+#### 三、 【Java】基础要点
 
 - 3.1  源文件的基本组成部分是类（class）。
 - 3.2  一个源文件最多只能有一个public类，其它类个数不限。
@@ -30,11 +32,11 @@
 
 ####  五、【Java】 基本数据类型
 
-#####5.1、 Java数据类型的分类
+##### 5.1、 Java数据类型的分类
 - 基本数据类型
 - 引用数据类型
 
-##### 5、2  Java语言拥有**四类八种**基本数据类型
+##### 5.2  Java语言拥有**四类八种**基本数据类型
 - 整数类型：byte、short、int、long。
 - 字符类型：char。
 - 浮点类型：float、double。
@@ -74,19 +76,18 @@ byte、short、char、int、long、float、double
 
 ---
 
-
 ####  六、【Java】常量
 常量主要分为以下几种：
 ![image.png](https://upload-images.jianshu.io/upload_images/17476267-f17e29e2afff4717.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ####  七、【Java】变量
-【地位】：变量是Java中最基本的存储单元
-#####7.1、变量的要素包括
+【地位】：变量是Java中最基本的存储单元。
+##### 7.1、变量的要素包括
 - 7.1.1 变量类型
 - 7.1.2 变量名
 - 7.1.3 变量值
 - 7.1.4 作用域
-#####7.2、变量的创建与应用
+##### 7.2、变量的创建与应用
 - 7.2.1  每个变量都有特定的数据类型
 - 7.2.2 变量要先声明再使用
 - 7.2.3  声明变量的格式为：
@@ -100,10 +101,6 @@ type varName [ = value][,{varName [= value]}]
 - （2）通过变量名访问这一小块内存区域。
 - （3）使用这一小块内存区域时要先申请（使用变量前要先声明）。
 - （4）可以向这一小块区域中存放一些数据（对变量进行赋值）。
-
-
-![Image](https://upload-images.jianshu.io/upload_images/17476267-84a5308e5b9b9483.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
 ---
 
 #### 八、【java】运算符与表达式
