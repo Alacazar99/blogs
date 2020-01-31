@@ -7,7 +7,7 @@ TCP客户端服务器通信主要有以下五类，下面将对此进行详细�
 - IO多路复用
 - selector
 ---
-###### 单进程 TCP Server
+##### 单进程 TCP Server
 【特点】：一次只能为一个客户服务。
 
 【注意】：当服务器为这个客户服务的时候，只要服务器的listen队列还有空闲，那么当其它新的客户端发起连接后，服务器就会为新客户端建立连接，并且新客户端也可以发送数据，但服务器还不会处理。
@@ -97,7 +97,7 @@ while True:
 
 ---
 
-###### 多进程 TCP Server
+### 多进程 TCP Server
 【优势】：为了实现并发处理多个客户端请求，可以使用多进程，应用程序的主进程只负责为每一个新的客户端连接创建socket，然后为每个客户创建一个子进程，用来分别处理每个客户的数据。
 ```
 import os
@@ -168,7 +168,7 @@ finally:
 
 ---
 
-###### 多线程TCP Server
+### 多线程TCP Server
 【优势】：多线程版本比多进程版本的系统开销小几个数量级，操作系统可以同时开启更多的线程，而线程间的调度切换比多进程也小很多
 
 ```
@@ -236,7 +236,7 @@ finally:
 
 ---
 
-###### 协程版TCP Server
+###  协程版TCP Server
 ```
 import gevent
 from gevent import socket,monkey
@@ -302,18 +302,18 @@ finally:
     server_sock.close()
 ```
 
-######【内容补充】：gevent猴子补丁
+#### 【内容补充】：gevent猴子补丁
 
-【优点】：方便的导入非阻塞的模块，不需要特意的去引入。
-【特点】：猴子补丁充分利用了动态语言的灵活性，可以对现有的语言Api进行追加，替换，修改Bug，甚至性能优化等等。
+- 【优点】：方便的导入非阻塞的模块，不需要特意的去引入。
+- 【特点】：猴子补丁充分利用了动态语言的灵活性，可以对现有的语言Api进行追加，替换，修改Bug，甚至性能优化等等。
 
 - gevent的猴子补丁就可以对**ssl、socket、os、time、select、thread、subprocess、sys等模块**的功能进行了增强和替换；
--**monkey.patch_socket()**，将**同步的socket读写操作，替换成了异步版本**。
+- **monkey.patch_socket()**，将**同步的socket读写操作，替换成了异步版本**。
 -  monkey.patch_all() 包含了 monkey.patch_socket() server.py
 
 ---
 
-###### IO多路复用
+#### IO多路复用
 
 【特点】IO操作是不占用CPU的，IO多路复用，是为了管理起所有的IO操作。
 
@@ -334,7 +334,7 @@ IO多路复用模型：是建立在内核提供的多路分离函数select基础
 - （4）异步IO<sup>（Asynchronous IO）</sup>：
 即经典的Proactor设计模式，也称为异步非阻塞IO。
 
-##### 同步 & 异步
+###  同步 & 异步
 同步与异步是针对多个事件(线程/进程)来说的。
 
 - 如果事件A需要等待事件B的完成才能完成，这种串行执行机制可以说是同步的，这是一种可靠的任务序列，要么都成功，要么都失败。
@@ -343,7 +343,7 @@ IO多路复用模型：是建立在内核提供的多路分离函数select基础
 
 同步、异步可以理解为多个事件的执行方式和执行时机如何，是串行等待还是并行执行。同步中依赖事件等待被依赖事件的完成，然后触发自身开始执行，异步中依赖事件不需要等待被依赖事件，可以和被依赖事件并行执行，被依赖事件执行完成后，可以通过回调、通知等方式告知依赖事件。
 
-######阻塞 & 非阻塞
+#### 阻塞 & 非阻塞
 阻塞与非阻塞针对单一事件(线程/进程)。
 - 对于阻塞，如果一个事件在发起一个调用之后，在调用结果返回之前，该事件会被一直挂起，处于等待状态。
 - 对于非阻塞，如果一个事件在发起调用以后，无论该调用当前是否得到结果，都会立刻返回，不会阻塞当前事件。
@@ -354,7 +354,7 @@ IO多路复用模型：是建立在内核提供的多路分离函数select基础
 在Python中，有一个select模块，提供了：**select、poll、epoll**三个方法来调用系统的 select，poll，epoll 从而实现IO多路复用。
 （Windows 中，Python只提供： select）
 
-######【select方法】
+#### 【select方法】
 请参阅：[https://www.cnblogs.com/cthon/p/9046544.html](https://www.cnblogs.com/cthon/p/9046544.html)
 
 【实例】：通过select，实现读写分离（收发分离）
@@ -513,8 +513,6 @@ server.serve_forever()
 ---
 
 【sel.register方法】
-
-
 sel.register方法有三个参数，三个参数的功能如下：
 ```
 sel.register(sock, selectors.EVENT_READ, self.accept)
@@ -523,7 +521,7 @@ sel.register(sock, selectors.EVENT_READ, self.accept)
 - 第二个参数selectors.EVENT_READ：是事件类型；
 - 第三个参数self.accept：是回调方法 （key.data）；
 
-客户端连接到服务器上时，EVENT_READ事件触发，self.accept方法被调用。
+客户端连接到服务器上时，EVENT_READ事件触发，self.accept方法被调用。<br>
 【示例】：accept回调方法的应用
 ```
   def accept(self, sock, mask):
