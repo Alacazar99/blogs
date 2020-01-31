@@ -7,7 +7,7 @@
 - namedtuple (用于创建具有命名字段的tuple子类的工厂函数)
 - OrderedDict (记录输入顺序的dict)
 
-1.1. defaultdict
+##### 1.1. defaultdict
  > 其实就是一个查不到key值时不会报错的dict
 ```
 person = {'name':'xiaobai','age':18}
@@ -32,8 +32,8 @@ print ("The value of key  'adress' is : ",person['city'])
 ```
 大家可以发现，这次没有问题了，其实最根本的原因在于当创建defaultdict时，首先传递的参数是所有key的默认value值，之后添加name，age进去的时候才会有所改变，当最终查询时，如果`key存在`，那就输出对应的value值，如果`key不存在`，就会输出事先规定好的值`‘Key Not Found’`
 除此之外外，还可以利用defaultdict创建时，传递参数为所有key默认value值这一特性，实现一些其他的功能.
--------------------------------------------
-1.2. counter
+
+##### 1.2. counter
 > Counter是dict的子类。因此，它是一个无序集合，其中元素及其各自的计数存储为字典。
 就是一个计数器，**一个字典，key就是出现的元素，value就是该元素出现的次数**
 
@@ -53,7 +53,7 @@ print(count_tuple)
 ```
 `Counter一般不会用于dict和set的计数，因为dict的key是唯一的，而set本身就不能有重复元素`
 
-1.3. deque
+##### 1.3. deque
 > 在需要在容器两端的更快的添加和移除元素的情况下，可以使用deque.
 deque就是一个可以两头操作的容器，类似list但比列表速度更快
 
@@ -102,8 +102,8 @@ print(d)
 输出：deque([1, 2, 3, 4, 5, 6, 7, 8, 100], maxlen=9)
      deque([-100, 1, 2, 3, 4, 5, 6, 7, 8], maxlen=9)
 ```
-------------------------------------------------
-1.4. namedtuple
+
+##### 1.4. namedtuple
 > **命名元组**。它是元组的强化版。namedtuple可以将元组转换为方便的容器。`使用namedtuple，不必使用整数索引来访问元组的成员。`
 可以把namedtuple 视为 不可变的 字典
 ```
@@ -118,8 +118,7 @@ Person(name='xiaobai', age=18, city='paris')
 ```
 创建namedtuple时非常像定义一个class，这里Person好比是类名，第二个参数就是namedtuple的值的名字了，很像class里的属性，不过这里不用加逗号分离。
 
------------------------------------
-1.5. OrderedDict
+##### 1.5. OrderedDict
 > “OrderedDict” 本身就是一个dict，但是它的特别之处在于会记录插入dict的key和value的顺序
 
 举个栗子：
