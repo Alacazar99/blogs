@@ -23,8 +23,9 @@
 |reverse（str）|返会字符串反转后的结果|
 |lacate（S1，str）|返会字符串S1在字符串str中的起始位置|
 
----
+
 比较懒...就不做表格了，直接上图
+
 ![函数功能（续）](https://upload-images.jianshu.io/upload_images/17476267-c3a0f9afe307da64.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ---
 
