@@ -1,12 +1,11 @@
 【插播】：[【SQL】(基础篇):](https://www.jianshu.com/p/b0d275039f72)https://www.jianshu.com/p/b0d275039f72
-#### 关于单表查询
+##  关于单表查询
 单表查询分为简单查询、条件查询以及高级查询三种，我将在下文中分别介绍一下。
 
 ---
-##### 简单查询
+## 简单查询
 简单查询主要介绍以下三种。
-
-###### （1）SELECT 语句的使用
+###  （1）SELECT 语句的使用
 ``` sql
 SELECT
      [DISTINCT] *|{字段 名 1, 字段 名 2, 字段 名 3,…}
@@ -15,7 +14,7 @@ FROM 表 名
 [GROUP BY 字段 名 [HAVING 条件 表达式 2]]
 [ORDER BY 字段 名 [ASC| DESC]][LIMIT [OFFSET] 记录 数]
 ```
-###### （2）查询所有字段
+###   （2）查询所有字段
 
 1、【结构】：
 ```SQL
@@ -27,7 +26,7 @@ FROM 表 名;
 SELECT * 
 FROM 表 名;
 ```
-###### （3）查询指定字段
+###   （3）查询指定字段
 
 【结构】：
 ```SQL
@@ -39,7 +38,7 @@ FROM 表 名;
 ---
 ---
 
-##### 按条件查询
+###   按条件查询
 条件查询主要分为以下八种。
 ```SQL
 SELECT 字段 名 1, 字段 名 2,… 
@@ -59,7 +58,7 @@ SELECT * FROM tb_student WHERE stu_name = "李白"or stu_name = "杜甫";
 ```
 ---
 
-###### （1）带关系运算符的的查询
+###  （1）带关系运算符的的查询
 
   - 【结构】：
 ```SQL
@@ -70,7 +69,7 @@ from 表名 where 条件表达式
 ```SQL
 SELECT id, name FROM student WHERE id= 4;
 ```
-######  （2）带IN的关键字
+###   （2）带IN的关键字
 
   - 【结构】：
 ```SQL
@@ -109,7 +108,7 @@ WHERE
 ![结果展示](https://upload-images.jianshu.io/upload_images/17476267-e9b23a28df9e22b8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ---
-######  （3）带between...and 的关键字
+###  （3）带between...and 的关键字
 
   - 【结构】：
 ```SQL
@@ -138,7 +137,7 @@ AND "20162156";
 
 ---
 
-######  （4）空值查询
+###   （4）空值查询
  在SQL中 NULL 与任何值（包括自己）做相等比较时，都是** false**。
 【结构】：
 ```SQL
@@ -160,8 +159,7 @@ WHERE
 	birth_day IS NULL;
 ```
 ---
-
-######  （5）带distinct关键字的查询
+###   （5）带distinct关键字的查询
 【介绍】：DISTINCT 去重;
 【结构】：
 ```SQL
@@ -182,7 +180,7 @@ FROM
 ```
 ---
 
-######  （6）带LIKE 关键字的查询
+###   （6）带LIKE 关键字的查询
  【介绍】 like: 模糊查询，%：代表0个或多个字符；
 【结构】：
 ```SQL
@@ -222,7 +220,7 @@ WHERE
 
 ---
 
-######  （7）带AND 关键字的多条件查询
+###    （7）带AND 关键字的多条件查询
 
 【结构】：
 ```SQL
@@ -245,7 +243,7 @@ WHERE
 	t.class_no = 2
 AND t.gender = 0;
 ```
-######  （8）带or关键字的条件查询
+###   （8）带or关键字的条件查询
 
 【结构】：
 ```SQL
@@ -257,7 +255,7 @@ OR 条件 表达式 n];
 ```
 ---
 
-##### 高级查询
+###  高级查询
 高级查询是单表查询的重点查询方式，能够完成许多较为复杂的查询方式。主要有以下四种查询方式。
 ###### （1）聚合查询
 |函数名称|作用|
@@ -311,7 +309,7 @@ SELECT avg(score),subject_no FROM tb_score WHERE subject_no = 1;
 SELECT stu_no,SUM(score) FROM tb_score WHERE stu_no = '20162155';
 ```
 ---
-###### （2）查询结果排序
+###  （2）查询结果排序
 
 ```SQL
 SELECT 字段名 1, 字段名 2,…
@@ -342,7 +340,7 @@ ORDER BY
 【结果展示】：
 ![排序结果](https://upload-images.jianshu.io/upload_images/17476267-0c788b548d3e3803.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ---
-######（3）分组查询
+##### （3）分组查询
 ``` SQL
 SELECT 字段 名 1, 字段 名 2,…
  FROM 表 名 
@@ -381,7 +379,7 @@ HAVING
 -  having：用于过滤组。使用于group by 后面。
 - where：用于过滤记录； 
 ---
-######（4）使用LIMIT限制查询结果数量
+##### （4）使用LIMIT限制查询结果数量
 【介绍】LIMIT: 用于分页；
 ```SQL
 SELECT 字段 名 1, 字段 名 2,…
