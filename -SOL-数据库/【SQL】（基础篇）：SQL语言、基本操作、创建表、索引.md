@@ -13,7 +13,7 @@
 ---
 
 ---
-##### 关于SQL语言
+###  关于SQL语言
  SQL<sup>（ Structured Query Language） </sup>是 一种数据库查询语言和程序设计语言，主要用于管理数据库中的数据，如存取数据、查询 数据、更新 数据等。
 由以下四种语言构成：
 
@@ -59,7 +59,7 @@
 
 ---
 
-#####数据库和表的基本操作
+### 数据库和表的基本操作
 
 (1).创建数据库
 
@@ -142,7 +142,7 @@ MariaDB [db_student_msg]> desc tb_score;
 ```
 ---
 
-##### 数据类型
+###   数据类型
 
 mysql 提供了多种数据类型，包括：**整数、浮点数、定点数、日期和时间、字符串和二进制**类型。（这里就不详细阐述了...）
 |数据类型|存储范围|数据类型|存储范围|
@@ -151,7 +151,7 @@ mysql 提供了多种数据类型，包括：**整数、浮点数、定点数、
 |BLOB|0~65535字节|LONGBLOB|0~4294967295字节|
 
 ---
-#####创建数据表
+###  创建数据表
 
 ```
  【格式】：CREATE TABLE 表 名 (
@@ -166,7 +166,7 @@ mysql 提供了多种数据类型，包括：**整数、浮点数、定点数、
 
 - 查看表的字段信息：DESC 表名；
 
-###### 修改数据表
+####  修改数据表
 - 1） 修改表名
 
 【格式】：alter table 旧表名 rename [to] 新表名
@@ -197,7 +197,7 @@ mysql 提供了多种数据类型，包括：**整数、浮点数、定点数、
 【格式】：drop table 表名
 
 ---
-##### 关于表的约束
+####  关于表的约束
 为了防止向数据库中插入错误的数据，在mysql中定义了一些约束规则。
 ![表的约束](https://upload-images.jianshu.io/upload_images/17476267-6e09ad41f037256d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -226,7 +226,7 @@ mysql 提供了多种数据类型，包括：**整数、浮点数、定点数、
 - 【格式】：字段 名 数据 类型 DEFAULT 默认值；
 
 ---
-###### 关于表中字段的自动增加
+####  关于表中字段的自动增加
 
 - 【目的】：为了给新插入的字段一个唯一的ID
 - 【格式】：字段名 数据类型 AUTO_ INCREMENT;
@@ -236,7 +236,7 @@ CREATE TABLE example05( id INT PRIMARY KEY AUTO_ INCREMENT, stu_ id INT UNIQUE, 
 ```
 
 ---
-##### 索引
+###  索引
 【解释】：索引就好像一本书的目录，用于快速检索数据。
 索引分类：普通索引、唯一索引、全文索引。
 
@@ -251,7 +251,7 @@ CREATE TABLE example05( id INT PRIMARY KEY AUTO_ INCREMENT, stu_ id INT UNIQUE, 
 【提高】：索引也可创建在多列上。
 
 ---
-##### 创建索引
+###  创建索引
 在创建表的时候，如果创建索引，结构如下：
 ``` sql
  CREATE TABLE 表 名(
@@ -269,7 +269,7 @@ CREATE TABLE example05( id INT PRIMARY KEY AUTO_ INCREMENT, stu_ id INT UNIQUE, 
   -  【长度】：表示索引的长度；
   -  【ASC|DESC】： 索引的顺序；
 
-###### 分类探讨创建索引
+###   分类探讨创建索引
 -  1）创建普通索引
 
 【格式】：CREATE TABLE t1( id INT, name VARCHAR( 20), score FLOAT,name VARCHAR( 20), score FLOAT, INDEX (id) );
@@ -283,7 +283,7 @@ CREATE TABLE example05( id INT PRIMARY KEY AUTO_ INCREMENT, stu_ id INT UNIQUE, 
 【格式】：CREATE TABLE t5( id INT NOT NULL, name VARCHAR( 20) NOT NULL,score FLOAT, INDEX multi( id, name( 20)) );
 
 ---
-###### 删除索引
+##   删除索引
 
 - 直接操作
 
@@ -293,9 +293,9 @@ CREATE TABLE example05( id INT PRIMARY KEY AUTO_ INCREMENT, stu_ id INT UNIQUE, 
 【结构】：DROP INDEX 索引 名 ON 表 名;
 
 ---
-#####【重点】添加、更新、删除数据
+### 【重点】添加、更新、删除数据
 
-###### 添加数据
+###  添加数据
   -  指定字段添加数据
 
 【结构】：INSERT INTO 表 名( 字段 名 1, 字段 名 2,…) VALUES( 值 1, 值 2,…);
@@ -308,11 +308,11 @@ CREATE TABLE example05( id INT PRIMARY KEY AUTO_ INCREMENT, stu_ id INT UNIQUE, 
 
 【结构】：INSERT INTO 表 名[( 字段 名 1, 字段 名 2,…) ] VALUES( 值 1, 值 2,…),( 值 1, 值 2,…), … (值 1, 值 2,…);
 
-###### 更新数据
+####  更新数据
 
 【结构】：UPDATE 表 名 SET 字段 名 1= 值 1[, 字段 名 2 = 值 2,…] [WHERE 条件 表达式]
 
-###### 删除数据
+####  删除数据
 
 - 【结构】：DELETE FROM 表 名 [WHERE 条件 表达式]；
 
