@@ -22,7 +22,7 @@ Django使用请求和响应对象来通过系统传递状态。
 
 ---
 
-#####给视图加装饰器
+##### 给视图加装饰器
 
 （1）FBV加装饰器
 常用的一种方式：在函数上方加装饰器  @wrapper_name；
@@ -61,9 +61,9 @@ rom django.views.decorators.csrf import csrf_exempt,csrf_protect
 ```
 ---
 
-#####Requset对象  VS  Respondse对象
+#### Requset对象  VS  Respondse对象
 
-######request对象
+##### request对象
 当一个页面被请求时，Django会形成一个包含被请求信息的对象；
 Django会将这个对象自动传递给响应的视图函数，一般视图函数预定俗称的使用request参数承接这个对象。
 
@@ -80,7 +80,7 @@ FILES     |      上传文件，{}    注意form标签加**enctype="multipart/fo
 HTTP_REFERER |   **跳转到上次访问的页面，用户在未登录前要访问的页面**，登录后跳转到该页面， redirect(request.Meta.get('HTTP_REFERER'，'')
 
 ---
-#####属性
+####  属性
 django将请求报文中的请求行、头部信息、内容主体封装成 HttpRequest 类中的属性。
 
 |请求（属性）|作用|
@@ -130,7 +130,7 @@ HttpRequest.is_ajax()|请求是通过XMLHttpRequest 发起的，则返回True，
 
 ---
 
-######Respondse对象
+##### Respondse对象
 我们写的每个视图都需要实例化，填充和返回一个HttpResponse。HttpResponse类位于django.http模块中。具体属性见下表
 
 |属性|作用|
@@ -141,7 +141,7 @@ HttpResponse.status_code：|响应的状态码
 
 ---
 
-##### render（）
+####  render（）
 结合一个给定的模板和一个给定的上下文字典，并返回一个渲染后的 HttpResponse 对象。
 【】
 |参数|作用|
@@ -164,7 +164,7 @@ def my_view(request):
     return HttpResponse(t.render(c, request))
 ```
 ---
-##### redirect（）
+####  redirect（）
 【参数】：
 - 一个模型：将调用模型的get_absolute_url() 函数
 - 一个视图：可以带有参数，将使用urlresolvers.reverse 来反向解析名称
