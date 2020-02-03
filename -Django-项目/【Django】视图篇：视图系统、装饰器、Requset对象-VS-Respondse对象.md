@@ -68,6 +68,7 @@ rom django.views.decorators.csrf import csrf_exempt,csrf_protect
 Django会将这个对象自动传递给响应的视图函数，一般视图函数预定俗称的使用request参数承接这个对象。
 
 请求相关的常用值
+
 |请求常用值|作用|
 |:-:|:-:|
 path_info  | 返回用户访问的url，不包含域名，仅path不带参数     
