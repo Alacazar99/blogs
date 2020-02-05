@@ -333,4 +333,4 @@ my name is aa, my age is 20
 ```
 ---
 
-【总结】：此篇文章用于初步学习和了解【JavaScript】，如果简书朋友们希望能深入学习这门语言。可以看看【W3Cshool】上的教程[https://www.w3cschool.cn/javascript/](https://www.w3cschool.cn/javascript/)
+【总结】：此篇文章用于初步学习和了解【JavaScript】，如果朋友们希望能更多的学习这门语言。可以看看【W3Cshool】上的教程[https://www.w3cschool.cn/javascript/](https://www.w3cschool.cn/javascript/)
