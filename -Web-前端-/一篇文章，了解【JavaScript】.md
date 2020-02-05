@@ -1,9 +1,11 @@
 【先来打个招呼】
+
 ![本页使用 firefox打开](https://upload-images.jianshu.io/upload_images/17476267-8baa22114c14272c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 ![简书交友~](https://upload-images.jianshu.io/upload_images/17476267-49f3af7caf6a6a37.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
----
-【进入正题】
-##### 关于【JavaScript】
+
+
+#####  关于【JavaScript】
 【简介】JavaScript 是互联网上最流行的脚本语言，这门语言可用于 HTML 和 web，更可广泛用于服务器、PC、笔记本电脑、平板电脑和智能手机等设备。
 - JavaScript 是一种轻量级的编程语言。
 
@@ -52,7 +54,7 @@ function test(){
 【解释一下】：运行结果如上图所示。
 
 ---
-#####【JavaScript】中的数据类型
+##### 【JavaScript】中的数据类型
 主要有以下几类：
 - 数字：整数、浮点数；
 - 字符串：单引号、双引号；
@@ -60,7 +62,7 @@ function test(){
 - Null型：null；
 - undefined型（未定义）：undefined;
 
-#####【JavaScript】中的变量作用范围
+##### 【JavaScript】中的变量作用范围
 js在默认情况下，变量以函数为范围。
 
 变量 **加var与不加var** 的区别：
@@ -71,7 +73,7 @@ js在默认情况下，变量以函数为范围。
 【重点总结】
 【关于常量】：一旦赋值，就不能再修改的量；
 ---
-##### 关于【JavaScript】中的函数
+#####  关于【JavaScript】中的函数
 在JavaScript中，**函数即对象**，可以随意地被程序操控，函数可以嵌套在其他函数中定义，这样可以访问它们被定义时所处的作用域中的任何变量。
 
 【w3cshool上的解释】：函数是由**事件驱动**的或者当它被调用时执行的**可重复使用**的代码块。
@@ -103,7 +105,7 @@ undefined
 
 ---
 
-###### 关于【JavaScript】的数组
+#### 关于【JavaScript】的数组
 直接来看以下实例：
 ```js
 var name = "zhang san";
@@ -129,7 +131,7 @@ true
 number
 ```
 【插播内容】
-###### 什么是正则表达式？
+#### 什么是正则表达式？
 - 正则表达式是**由一个字符序列形成的搜索模式**。
 
 当你在文本中搜索数据时，你可以用**搜索模式**来描述你要查询的内容。
@@ -173,7 +175,7 @@ switch(a){
 ```
 ---
 
-####关于【JavaScript】的循环
+#### 关于【JavaScript】的循环
 
 主要的几种循环类型：
 - for - 循环代码块一定的次数；
@@ -218,7 +220,7 @@ for(var i = 0; i < 10; i++){
 【注释】：但凡是有编程基础的朋友，以上内容都是最基础的。
 
 ---
-##### 【JavaScript】面向对象（重点）
+#####  【JavaScript】面向对象（重点）
 JavaScript 允许自定义对象。
 
 **JavaScript 中，一切事物都是对象**
@@ -291,7 +293,7 @@ Hello WOrd!!
 ```
 ---
 
-#### 关于 ES6
+###  关于 ES6
 【简介】ES6 主要是为了解决 ES5 的先天不足，比如 JavaScript 里并没有类的概念，但是目前浏览器的 JavaScript 是 ES5 版本，大多数高版本的浏览器也支持 ES6，不过只实现了 ES6 的部分特性和功能。
 - 箭头函数
 - 类
