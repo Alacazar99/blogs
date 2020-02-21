@@ -1,18 +1,19 @@
-###📖 关于Beautiful Soup
+### 📖 关于Beautiful Soup
 【简介💬】：Beautful Soup 就是Python 的一个HTML或者 XML 的解析库，可以用它来方便地从网页中提取数据。
 
 Beautiful Soup 提供一些简单的、python 式的函数来处理导航、搜索、修改分析树等功能。它是一个工具箱，通过解析文档为用户提供需要抓取的数据，因为简单，所以不需要多少代码就可以写出一个完整的应用程序。
 
 【评价💬】：一个灵活又方便的网页解析库，处理高效，支持多种解析器。
-##### Beautiful Soup安装
+####  Beautiful Soup安装
 ![安装.png](https://upload-images.jianshu.io/upload_images/17476267-fa8d5b37181715af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 或者：
 ```
 pip install Beautiful Soup
 ```
 
-###📖 Beautiful Soup的使用
+### 📖 Beautiful Soup的使用
 Beautiful Soup支持lxml 、html5lib 、xml等第三方库，优缺点如下：
+
 - **python内置标准库**：执行速度适中，文档容错能力强；
 - **使用lxml 库解析**：执行速度快，文档容错能力强，但是要求安装lxml扩展；
 - **使用 html5lib 库解析**：有最好的容错率，已浏览器的方式解析文档，生成HTML5格式的文档，但速度较慢；
@@ -117,7 +118,7 @@ Zurich_Alacazar
 <title>文集精选</title>
 ['\n', <b>Zurich_Alacazar</b>, '\n']
 ```
-####📖 四种对象
+####  📖 四种对象
 Beautiful Soup中，将复杂HTML文档转换成一个复杂的树形结构,每个节点都是Python对象,所有对象可以归纳为4种：
 - Tag（ HTML 中的标签）
 例如：
@@ -145,7 +146,8 @@ print(soup.p.b.string)
 ```
   print(soup.p.contents)
 ```
-####📖 关于节点
+#### 📖 关于节点
+
 |描述|属性|返会类型
 |:-:|:-:|:-:|
 获取直接子节点|contents|返回列表
@@ -154,6 +156,7 @@ print(soup.p.b.string)
 获取祖先元素：|parents属性|所有的祖先节点
 获取兄弟元素：|next_sibling  、previous_sibling |分别获取下一个兄弟元素和上一个兄弟元素；
 获取兄弟元素：|next_siblings 、 previous_siblings  |分别获取前面的兄弟元素和后面的兄弟元素；
+
 【💬实例】如下：
 ```
 def basic2():
@@ -324,11 +327,13 @@ test_find_all()
 
 ```
 
-###📖  CSS选择器
+### 📖  CSS选择器
 在写 CSS 时，标签名不加任何修饰，类名前加点`.`，id名前加`#` 。同理，在这里我们也可以利用类似的方法来筛选元素，用到的方法是 **soup.select()**，返回类型是  ` list`。
+
 ```
 print(soup.select("根据不同的需求，进行选择"))
 ```
+
 方法和上述类似，主要查找方式分为以下五种：
 - （1）通过标签名查找；
 - （2）通过类名查找；
