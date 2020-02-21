@@ -48,11 +48,13 @@
 - 确认网站的真实性。因为需要CA机构颁发CA证数。
 
 ### 🐾HTTP请求过程
+
 HTTP请求，由客户端向服务器端发出，主要是以下四个部分：
 - 请求方法（Request Method）
 - 请求的网址（Request URL）
 - 请求头(Request Header)
 - 请求体（Request Body）
+
 #### 请求方法介绍
 请求方法重点掌握**“增”、“删”、“改”、“查”**
 
@@ -68,6 +70,7 @@ OPTIONS|请求web服务器告知其支持的各种功能
 
 #####  🐾请求头
 请求头里存放了服务器使用的附加信息，例如Cookie、User-Agent等。常见信息见下表：
+
 请求头|作用
 |:-:|:-:|
  Accept：|请求报头域，用于指定客户端可以接收哪些类型的信息。
@@ -81,16 +84,18 @@ OPTIONS|请求web服务器告知其支持的各种功能
 
 
 ##### 请求体
-【一般情况】使用post来请求数据；对于get请求，请求体为空。
+【一般情况】使用post来请求数据；对于get请求，请求体为空。<br>
 【注意】：**Get请求每次提交的数据，最多只能有1024字节。**
 
 Content-Type 和 POST 提交数据方式的关系，如下表。
+
 content-type类型|提交数据的方式
 |:-:|:-:|
 application/x-www-form-urlencoded|表单数据
 multipart/form-data|文件上传
 application/json|序列化的JSON数据
 text/xml|xml数据。
+
 【注释】：在爬虫应用中，如果要构造 POST 请求，需要使用正确的 Content-Type，并了解各种请求库的各个参数设置时使用的是哪种 Content-Type， 不然可能会导致 POST 提交后无法正常响应。
 
 ##### 🐾响应
@@ -112,7 +117,7 @@ text/xml|xml数据。
  405| Method Not Allowed(不允许使用的方法) |指定资源不支持请求使用的方法
  500 |Internal Server Error(内部服务器错误) |处理请求的过程中，发生了意外错误
 
-【补充】：通常情况下，2xx:表示成功；3xx:表示重定向；4xx:表示客户端错误；5xx:表示服务器错误。具体关于响应状态码可参考：[https://www.cnblogs.com/fwl8888/p/9388414.html](https://www.cnblogs.com/fwl8888/p/9388414.html)
+【补充】：通常情况下，2xx:表示成功；3xx:表示重定向；4xx:表示客户端错误；5xx:表示服务器错误。具体关于响应状态码可参考：<br>[https://www.cnblogs.com/fwl8888/p/9388414.html](https://www.cnblogs.com/fwl8888/p/9388414.html)
 
 ##### 🐾 响应头
 【解释】：包含了服务器对请求的响应信息。
