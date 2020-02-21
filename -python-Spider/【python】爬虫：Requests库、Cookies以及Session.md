@@ -1,15 +1,15 @@
 ![一张图解释：requests在python爬虫应用中的地位](https://upload-images.jianshu.io/upload_images/17476267-32fcb2459d2f9062.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-#####Requests库概述
+##### Requests库概述
 【介绍💬】：使用requests可以模拟浏览器的请求。（requests模块本质上是封装了的urllib3，所以比urllib更实用，所以关于urllib，大致了解就可以了，用来写爬虫，代码会很多...）
 
 安装requests
 ```python
  pip install requests
 ```
-######🐾Requests库的突出优势
+##### 🐾Requests库的突出优势
 【详解💬】：由于requests模块本质上是封装了的urllib3，所以我们不需要手动为 URL 添加查询字串，也不需要对 POST 数据进行表单编码。Keep-alive 和 HTTP 连接池的 功能是 100% 自动化的。
-######为什么使用Requests库
+###### 为什么使用Requests库
 
 >- requests在python2 和python3中通用，方法完全一样；
 >- **工作中爬虫基本都使用requests**；
@@ -23,7 +23,7 @@ response = requests.post(url, data = data, headers=headers)
 
 ---
 
-######🐾 Requests库的功能特性
+###### 🐾 Requests库的功能特性
 - Keep-Alive & 连接池 
 - 国际化域名和 URL
 -  带持久 Cookie 的会话
@@ -44,7 +44,7 @@ response = requests.post(url, data = data, headers=headers)
 本质上都是基于键值对的字符串。
 
 
- ######Cookies 
+ ###### Cookies 
 【简介💬】：Cookies 指某些网站为了辨别用户身份、 进行会话跟踪而存储在用户本地终端上的数据。
 那么Cookies在哪儿呢？举个栗子：
 
@@ -56,11 +56,11 @@ response = requests.post(url, data = data, headers=headers)
 - session会在一定时间内保存在服务器上。当访问增多，会比较占用服务器的性能；
  - 单个cookie保存的数据不能超过4K，很多浏览器都限制一个站点最多保存20个cookie。
 
-######【优缺点💬】：
+###### 【优缺点💬】：
 - 带上cookie、session的**好处**：很多网站必须登录之后(或者获取某种权限之后)才能能够请求到相关数据 
 - 带上cookie、session的**弊端**：一套cookie和session往往和一个用户对应.请求太快，请求次数太多， 容易被服务器识别为爬虫。从而是账号收到损害；
 
-######【使用建议💬】：
+###### 【使用建议💬】：
 - 不需要cookie的时候尽量不去使用cookie 
 - 为了获取登录之后的页面，我们必须发送带有cookies的请求，此时为了确保账号安全应该尽量降低数据采集速度。
 
@@ -82,7 +82,7 @@ opt_cookie()
 ```
 ---
 
-##### 🐾爬虫的简单应用
+#####  🐾爬虫的简单应用
 
 【举个实例】：实现 “在线翻译”
 【详解】：主要是借用了[http://fy.iciba.com/](http://fy.iciba.com/)
