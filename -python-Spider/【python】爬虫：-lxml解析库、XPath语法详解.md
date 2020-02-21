@@ -9,13 +9,14 @@ pip install lxml
 ```
 ---
 
-######XPath语法
+#### XPath语法
 【简介💬】：XPath是一门在XML和HTML文档中查找信息的语言，可以用来在XML和HTML文档中对元素和属性进行遍历搜索。
 
 ![XPath（图片来源网络）](https://upload-images.jianshu.io/upload_images/17476267-2757df283766c368.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 XPath，全称XML Path Language，即**XML路径语言**，具体内容见下表：
+
 表达式	|描述
 |:-:|:-:|
 nodename|	选取此节点的所有子节点
@@ -40,8 +41,10 @@ XPath 函数分组|描述
 [Boolean](https://docs.microsoft.com/zh-cn/previous-versions/ms256218%28v%3dvs.120%29) | 计算参数表达式，以获取布尔值结果。
 [数字](https://docs.microsoft.com/zh-cn/previous-versions/ms256035%28v%3dvs.120%29)|计算参数表达式，以获取数字结果。
 [Microsoft XPath 扩展函数](https://docs.microsoft.com/zh-cn/previous-versions/ms256453%28v%3dvs.120%29) | 提供按 XSD 类型选择节点的功能的 Microsoft XPath 扩展函数。 此外，还包括字符串比较函数、数字比较函数和日期/时间转换函数。
+
 ---
-字符串函数 (XPath)	|描述
+
+字符串函数 (XPath)|描述
 |:-:|:-:|
 | [concat](https://docs.microsoft.com/zh-cn/previous-versions/ms256123%28v%3dvs.120%29) | 返回参数的串联。 
 | [contains](https://docs.microsoft.com/zh-cn/previous-versions/ms256195%28v%3dvs.120%29) | 如果第一个参数字符串包含第二个参数字符串，则返回 true；否则，返回 false。
@@ -110,7 +113,7 @@ select_nodes()
 ```
 【注释💬】：xpath("//")  **双斜杠开头**即为**选中全部**。
 
-- ##### 选中所有的子节点
+- #### 选中所有的子节点
 ```
 def select_child_nodes():
     # 选中所有的子节点
@@ -129,7 +132,7 @@ select_child_nodes()
 [<Element a at 0x347ec60>, <Element a at 0x347ec38>, <Element a at 0x347ec10>, <Element a at 0x347e940>, <Element a at 0x347e738>]
 ```
 
-- ##### 选中父亲节点
+- #### 选中父亲节点
 
 ```
 def select_parent_nodes():
@@ -249,6 +252,7 @@ get_multi_attr_match()
 ['first item']
 ```
 【程序解析】：and 是xpath中的运算符。常见运算符如下表：
+
 XPath中的运算符	|描述	|实例	|返回值
 |:-:|:-:|:-:|:-:|
 or|或	|age=19 or age=20	|如果age等于19或者等于20则返回true反正返回false
@@ -257,8 +261,6 @@ mod	|取余	|5 mod 2	|1
 
 【更多关于运算符，可参考】：[http://www.w3school.com.cn/xpath/xpath_operators.asp](http://www.w3school.com.cn/xpath/xpath_operators.asp)
 
-
-##### 
 
 ```
 def select_node_by_order():
